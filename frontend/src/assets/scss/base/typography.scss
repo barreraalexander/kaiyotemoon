@@ -1,4 +1,55 @@
 h1, h2, h3,
-h4, h5, h6{
+h4, h5, h6,
+p, li, ul,
+small, a{
     margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: $font1;
+    font-size: 3.5em;
+    letter-spacing: 1.4px;
+    font-family: 500;
+}
+
+h2{
+    font-family: $font2;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+h3{
+    font-family: $font2;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+p{
+    font-family: $font1;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+small{
+    font-family: $font1;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+li{
+    font-family: $font1;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+a{
+    font-family: $font2;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+
+.router-link-active{
+
 }
