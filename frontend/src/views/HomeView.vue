@@ -1,13 +1,13 @@
 <script setup>
 import PoemDisplay from "@/components/sections/PoemDisplay.vue";
-// import PoemDisplay from "@/components/sections/"
-
+import PoemArchive from "@/components/sections/PoemArchive.vue";
 
 </script>
 
 <template>
   <section id="HomeViewSection">
     <PoemDisplay/>
+    <PoemArchive/>
   </section>
 </template>
 
