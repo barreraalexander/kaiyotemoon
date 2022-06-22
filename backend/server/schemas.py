@@ -3,15 +3,15 @@ from datetime import datetime
 from typing import Optional
 
 class PoemBase(BaseModel):
-    name: str
+    title: str
+    content: str
 
 class PoemCreate(PoemBase):
-    pass
+    title: str
+    content: str
 
 class Poem(PoemBase):
     id: int
-    title: str
-    content: str
     created_at: datetime
 
     class Config:

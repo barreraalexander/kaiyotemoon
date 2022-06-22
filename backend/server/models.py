@@ -7,6 +7,6 @@ class Poem(Base):
     __tablename__ = 'poems'
 
     id = Column(Integer, primary_key=True, nullable=False)
-    title = Column(String, nullable=False)
+    title = Column(String, nullable=False, unique=True)
     content = Column(String, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=('now()'))
