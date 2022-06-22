@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from typing import List
 
 router = APIRouter(
-    pref="/poems",
+    prefix="/poems",
     tags = ['Poems']
 )
 
@@ -25,3 +25,4 @@ def get_poem(id: int, db: Session=Depends(get_db)):
 
     return poem
 
+# @router.get("")
