@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from server import models
 from server.database import engine
-from server.routers import poem
+from server.routers import poem, dbops
 
 models.Base.metadata.create_all(bind=engine)
 
@@ -22,5 +22,7 @@ def create_app():
     )
 
     app.include_router(poem.router)
+    app.include_router(dbops.router)
+    
 
     return app

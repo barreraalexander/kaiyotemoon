@@ -13,19 +13,6 @@ router = APIRouter(
     tags = ['Poems']
 )
 
-@router.get("/filldb", status_code=status.HTTP_201_CREATED)
-def fill_db(db: Session = Depends(get_db)):
-    poem_dicts = run_fill_db()
-    for poem_dict in poem_dicts:
-        poem = models.Poem(**poem_dict)
-        db.add(poem)
-        db.commit()
-        # print (poem_dict, "\n\n")
-        # print (poem.content, "\n\n")
-    # print (poem_dicts)
-
-    # print ('here')
-
 
 @router.get("/", response_model=List[schemas.Poem])
 def get_poems(db: Session = Depends(get_db)):
