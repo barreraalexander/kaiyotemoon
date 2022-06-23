@@ -1,0 +1,16 @@
+#HiddenNavSection{
+    background: red;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+}
+
+@media only screen and (min-width: $desktop_bp) {
+    #HiddenNavSection{
+        display: none;
+    }
+    
+}
