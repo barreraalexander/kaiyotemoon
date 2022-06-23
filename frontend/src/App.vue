@@ -1,8 +1,6 @@
 <script setup>
 import HeaderNav from '@/components/navbars/HeaderNav.vue';
-import FooterNav from '@/components/navbars/FooterNav.vue'
-
-
+import FooterNav from '@/components/navbars/FooterNav.vue';
 </script>
 
 <template>
@@ -16,8 +14,6 @@ import FooterNav from '@/components/navbars/FooterNav.vue'
 </template>
 
 <style lang="scss">
-
 @import "@/assets/scss/base/base.scss";
 @import "@/assets/scss/base/typography.scss";
-
 </style>

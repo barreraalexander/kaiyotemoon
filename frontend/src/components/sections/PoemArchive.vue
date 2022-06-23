@@ -1,8 +1,16 @@
 <template>
     <section id="PoemArchive">
-        <h3>
-            Poem Archive
-        </h3>
+        <div class="banner_ctnr">
+            <img
+                id="close_icon"
+                src="@/assets/images/icons/close.svg"
+                alt=""
+                @click="closeArchive"
+            >
+            <h3>
+                Archive
+            </h3>
+        </div>
         <ul>
             <li
                 v-for="poem in poems"
@@ -33,8 +41,13 @@ export default {
                 let poem_content = document.querySelector('#poem_content')
                 poem_title.innerText = result.data.title
                 poem_content.innerText = result.data.content
+                this.closeArchive()
             }
             
+        },
+        closeArchive(){
+            let archive_section = document.querySelector('#PoemArchive')
+            archive_section.style.display = "none"
         }
     },
 
@@ -42,15 +55,12 @@ export default {
         let result = await axios.get("http://localhost:5001/poems")
         if (result.data){
             for (let elem of result.data){
-                // this.poem_titles.push(elem.title)
                 this.poems.push({
                     "id" : elem.id,
                     "title" : elem.title
                 })
             }
         }
-        // let poems = 
-        // console.log(this.poem_display_methods)
     }
 }
 

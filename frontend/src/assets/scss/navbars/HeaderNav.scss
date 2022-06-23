@@ -6,4 +6,25 @@
         justify-content: flex-end;
         gap: 1em;
     }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+    .router-link-active{
+        text-decoration: underline;
+    }
+    #archive_link{
+        display: none;
+    }
+}
+
+
+
+@media only screen and (min-width: $desktop_bp){
+    #archive_link{
+        display: none;
+    }
 }

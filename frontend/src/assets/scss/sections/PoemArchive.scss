@@ -1,17 +1,44 @@
 #PoemArchive{
     background-color: #000;
+    display: none;
+    padding: 2em;
+    position: absolute;
+    right: 0;
+    top: 0;
     h3{
         color: orange;
+        text-align: center;
     }
     ul{
         display: flex;
         flex-flow: column;
-        gap: 2em;
+        gap: 1em;
+        align-items: center;
+        list-style: none;
     }
     li{
         color: orange;
     }
     li:hover{
         cursor: pointer;
+    }
+    .banner_ctnr{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 2em;
+
+    }
+    #close_icon{
+        background-color: orange;
+        padding: .5em;
+        border-radius: 50%;
+
+    }
+}
+
+@media only screen and (min-width: $desktop_bp){
+    #PoemArchive{
+        display: block;
     }
 }

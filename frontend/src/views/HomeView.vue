@@ -12,6 +12,19 @@ import PoemArchive from "@/components/sections/PoemArchive.vue";
 </template>
 
 <script>
+export default {
+  mounted: function displayArchiveLink(){
+    let archive_link = document.querySelector('#archive_link');
+    archive_link.style.display = "block";
+  },
+  unmounted: function displayArchiveLink(){
+    let archive_link = document.querySelector('#archive_link');
+    archive_link.style.display = "none";
+  }
+
+
+}
+
 // @ is an alias to /src
 
 </script>
