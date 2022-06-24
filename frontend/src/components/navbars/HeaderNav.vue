@@ -12,7 +12,6 @@
                 </h3>
                 <div class="main_links">
                     <MainLinks/>
-                    <!-- <a id="archive_link" @click="handleArchiveLink">Archive</a> -->
                 </div>
                 <img
                     id="menu_icon"
@@ -35,21 +34,26 @@
 <script>
 import HiddenNav from "@/components/navbars/HiddenNav.vue";
 import MainLinks from "@/components/pieces/MainLinks.vue";
-var showing_menu = false;
+// var showing_menu = false;
 export default{
     methods: {
         handleArchiveLink() {
             let archive_section = document.querySelector("#PoemArchive");
             archive_section.style.display = "block";
         },
-        toggleHiddenMenu() {
+        toggleHiddenMenu(event) {
             let hidden_nav = document.querySelector('#HiddenNavSection');
-            hidden_nav.style.display = 'block';
-            if (showing_menu){
+            let menu_icon = document.querySelector('#menu_icon');
+            let close_icon = document.querySelector('#close_icon');
+            if (event.target===menu_icon){
+                hidden_nav.style.display = 'block';
+                menu_icon.style.display = 'none';
+                close_icon.style.display = 'block';
+            } else {
                 hidden_nav.style.display = 'none';
-                showing_menu = false;
-            } else  {
-                showing_menu = true;
+                menu_icon.style.display = 'block';
+                close_icon.style.display = 'none';
+
             }
         }
     },
