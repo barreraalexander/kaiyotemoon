@@ -8,7 +8,7 @@
 <style scoped>
 
 div{
-    display: content;
+    display: contents;
 }
 
 </style>

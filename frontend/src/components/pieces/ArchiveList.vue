@@ -1,28 +1,16 @@
 <template>
-    <section id="PoemArchive">
-        <div class="banner_ctnr">
-            <img
-                id="close_icon"
-                src="@/assets/images/icons/close.svg"
-                alt=""
-            >
-            <h3>
-                Archive
-            </h3>
-        </div>
-        <!-- <ul>
-            <li
-                v-for="poem in poems"
-                :key="poem.id"
-                @click="handleClick($event, poem.id)"            >
-                {{poem.title}}
-            </li>
-        </ul> -->
-    </section>
-
+    <ul class="archive_list">
+        <li
+            v-for="poem in poems"
+            :key="poem.id"
+            @click="handleClick($event, poem.id)"
+        >
+            {{poem.title}}
+        </li>
+    </ul>
 </template>
 
-<!-- <script>
+<script>
 import axios from 'axios'
 
 export default {
@@ -63,8 +51,8 @@ export default {
     }
 }
 
-</script> -->
+</script>
 
 <style lang="scss">
-@import "@/assets/scss/sections/PoemArchive.scss";
+@import '@/assets/scss/pieces/ArchiveList.scss';
 </style>

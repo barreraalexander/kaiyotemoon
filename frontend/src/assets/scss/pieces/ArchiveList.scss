@@ -1,0 +1,13 @@
+.archive_list{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1em;
+    list-style: none;
+    text-align: center;
+    background: $proj_gray2;
+    li:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

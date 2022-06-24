@@ -1,15 +1,17 @@
 <template>
     <section id="HeaderNavSection">
         <nav>
-            <ul>
-                <img
-                    id="kai_logo"
-                    src="@/assets/images/icons/kaiyote1.svg"
-                    alt="Kaiyote Moon Logo"
-                >
-                <h3>
-                    Kaiyote Moon
-                </h3>
+            <ul class="header_ul">
+                <div class="logo_banner_ctnr">
+                    <img
+                        id="kai_logo"
+                        src="@/assets/images/icons/kaiyote1.svg"
+                        alt="Kaiyote Moon Logo"
+                    >
+                    <h3>
+                        Kaiyote Moon
+                    </h3>
+                </div>
                 <div class="main_links">
                     <MainLinks/>
                 </div>
@@ -34,7 +36,6 @@
 <script>
 import HiddenNav from "@/components/navbars/HiddenNav.vue";
 import MainLinks from "@/components/pieces/MainLinks.vue";
-// var showing_menu = false;
 export default{
     methods: {
         handleArchiveLink() {
@@ -53,7 +54,6 @@ export default{
                 hidden_nav.style.display = 'none';
                 menu_icon.style.display = 'block';
                 close_icon.style.display = 'none';
-
             }
         }
     },

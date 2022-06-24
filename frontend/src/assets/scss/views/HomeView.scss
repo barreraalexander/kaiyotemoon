@@ -1,0 +1,16 @@
+.homeview_subdivision{
+    display: contents;
+}
+
+@media only screen and (min-width: $desktop_bp){
+    .homeview_subdivision{
+        display: flex;
+    }
+    #PoemArchive{
+        // flex: .25em;
+    }
+    #PoemDisplay{
+        flex: .75em;
+    }
+
+}
