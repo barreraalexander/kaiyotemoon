@@ -1,15 +1,32 @@
 #HiddenNavSection{
     // background: $proj_gray1;
-    background: $proj_primary_light;
+    // background: $proj_primary_light;
+    background: rgba($color: #fff, $alpha: .25);
     display: none;
     position: absolute;
     top: 0;
-    right: 0;
-    width: 70vw;
+    left: 0;
+    width: 100vw;
     padding-top: 2em;
+    z-index: 5;
     h2{
         text-align: center;
     }
+    .hidden_nav_ctnr{
+        display: flex;
+    }
+    .navigation_ctnr{
+        flex: 1;
+        background: $proj_primary_light;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .empty{
+        flex: .25;
+        background: rgba($color: #fff, $alpha: .25);
+        opacity: .25;
+    }
+
     .hidden_nav_main_links{
         display: flex;
         flex-flow: column;

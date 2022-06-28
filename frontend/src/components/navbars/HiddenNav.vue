@@ -6,13 +6,19 @@ import MainLinks from '../pieces/MainLinks.vue';
 
 <template>
     <section id="HiddenNavSection">
-        <h2>
-            Archive
-        </h2>
-        <ul class="hidden_nav_main_links">
-            <MainLinks/>
-        </ul>
-        <ArchiveList/>
+        <div class="hidden_nav_ctnr">
+            <div class="empty">                
+            </div>
+            <div class="navigation_ctnr">
+                <h2>
+                        Navigate
+                </h2>
+                <ul class="hidden_nav_main_links">
+                    <MainLinks/>
+                </ul>
+                <ArchiveList/>
+            </div>
+        </div>
     </section>
 </template>
 
