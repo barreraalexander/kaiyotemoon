@@ -1,11 +1,13 @@
 <script setup>
 import HeaderNav from '@/components/navbars/HeaderNav.vue';
 import FooterNav from '@/components/navbars/FooterNav.vue';
+import HiddenNav from './components/navbars/HiddenNav.vue';
 </script>
 
 <template>
   <section id="MainAppSection">
     <HeaderNav/>
+    <HiddenNav/>
     <main>
       <router-view/>
     </main>

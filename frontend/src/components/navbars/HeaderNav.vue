@@ -30,12 +30,11 @@
                 >
             </ul>
         </nav>
-        <HiddenNav/>
     </section>
 </template>
 
 <script>
-import HiddenNav from "@/components/navbars/HiddenNav.vue";
+// import HiddenNav from "@/components/navbars/HiddenNav.vue";
 import MainLinks from "@/components/pieces/MainLinks.vue";
 export default{
     methods: {
@@ -58,7 +57,7 @@ export default{
             }
         }
     },
-    components: { HiddenNav, MainLinks }
+    components: {MainLinks }
 }
 
 </script>

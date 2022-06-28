@@ -1,7 +1,7 @@
 #HiddenNavSection{
     background: rgba($color: #fff, $alpha: .25);
     position: absolute;
-    top: 0;
+    // top: 0;
     left: 0;
     width: 100vw;
     padding-top: 2em;
@@ -14,15 +14,29 @@
     }
     .navigation_ctnr{
         flex: 1;
-        background: $proj_primary_light;
+        // background: $proj_primary_dark;
+        // background: linear-gradient(-185deg, $proj_primary_dark, #000);
+        // background: linear-gradient(-185deg, $proj_primary_light, #fff);
+        // background: $proj_primary_light;
+        // background-position: center;
+        // background-size: contain;
+        // background-attachment: fixed;
+        // color: #fff;
+        background: rgba($color: #fff, $alpha: .95);
+
+        
         padding-top: 2em;
         border-radius: 5px 0 0 5px;
+        a{
+            color: $proj_primary_dark
+        }
     }
 
     .empty{
         flex: .25;
-        background: $proj_primary_dark;
-        opacity: .25;
+        // background: $proj_primary_dark;
+        // background: #000;
+        opacity: .9;
     }
 
     .hidden_nav_main_links{
@@ -33,7 +47,7 @@
         margin: 1em 0;
         a{
             font-size: 1.5em;
-            color: #000;
+            // color: #000;
         }
     }
     .archive_list{
