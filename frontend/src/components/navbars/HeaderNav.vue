@@ -23,6 +23,7 @@
                 >
                 <img
                     id="close_icon"
+                    data-status="hidden"
                     src="@/assets/images/icons/close.svg"
                     alt=""
                     @click="toggleHiddenMenu($event)"
@@ -47,13 +48,13 @@ export default{
             let menu_icon = document.querySelector('#menu_icon');
             let close_icon = document.querySelector('#close_icon');
             if (event.target===menu_icon){
-                hidden_nav.style.display = 'block';
-                menu_icon.style.display = 'none';
-                close_icon.style.display = 'block';
+                hidden_nav.dataset.status = ''
+                menu_icon.dataset.status = 'hidden';
+                close_icon.dataset.status = '';
             } else {
-                hidden_nav.style.display = 'none';
-                menu_icon.style.display = 'block';
-                close_icon.style.display = 'none';
+                hidden_nav.dataset.status = 'hidden'
+                menu_icon.dataset.status = '';
+                close_icon.dataset.status = 'hidden';
             }
         }
     },

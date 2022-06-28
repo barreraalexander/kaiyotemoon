@@ -40,9 +40,15 @@
         width: 2.5em;
         z-index: 10;
     }
-    #close_icon{
+
+    // #close_icon{
+    //     display: none;
+    // }
+    #menu_icon[data-status="hidden"],
+    #close_icon[data-status="hidden"]{
         display: none;
     }
+
 }
 
 

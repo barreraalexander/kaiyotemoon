@@ -1,8 +1,5 @@
 #HiddenNavSection{
-    // background: $proj_gray1;
-    // background: $proj_primary_light;
     background: rgba($color: #fff, $alpha: .25);
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -18,12 +15,13 @@
     .navigation_ctnr{
         flex: 1;
         background: $proj_primary_light;
+        padding-top: 2em;
         border-radius: 5px 0 0 5px;
     }
 
     .empty{
         flex: .25;
-        background: rgba($color: #fff, $alpha: .25);
+        background: $proj_primary_dark;
         opacity: .25;
     }
 
@@ -41,6 +39,10 @@
     .archive_list{
         padding: 2em;
     }
+
+}
+#HiddenNavSection[data-status="hidden"]{
+    display: none;
 }
 
 @media only screen and (min-width: $desktop_bp) {

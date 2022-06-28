@@ -1,11 +1,11 @@
 <script setup>
 // import '@/components/pieces/ArchiveList.vue'
 import ArchiveList from '@/components/pieces/ArchiveList.vue';
-import MainLinks from '../pieces/MainLinks.vue';
+import MainLinks from '@/components/pieces/MainLinks.vue';
 </script>
 
 <template>
-    <section id="HiddenNavSection">
+    <section id="HiddenNavSection" data-status='hidden'>
         <div class="hidden_nav_ctnr">
             <div class="empty">                
             </div>
