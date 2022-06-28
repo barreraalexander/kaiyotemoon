@@ -1,12 +1,15 @@
 #PoemDisplay{
     // height: 100vh;
-    background: orange;
+    background: $proj_primary_light;
+    // background: $proj_primary_dark;
+    padding: 2em;
     #poem_title{
         font-size: 1.5em;
     }
     #poem_content{
         // margin: 0 auto;
         white-space: pre-wrap;
+        line-height: 50px;
         // text-align: center;
     }
 }
