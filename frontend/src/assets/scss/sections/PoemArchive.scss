@@ -1,5 +1,6 @@
 #PoemArchive{
-    background: $proj_gray2;
+    background: $proj_gray1;
+    // background: $proj_gray2;
     display: none;
     padding: 2em;
     right: 0;
@@ -46,6 +47,10 @@
         li:nth-child(odd){
             color: #fff;
             background-color: $proj_primary_dark;
+        }
+        li[data-has_read=true]{
+            background-color: $proj_primary_orange;
+            color: #000;
         }
     }
 }

@@ -1,5 +1,6 @@
 <script setup>
 import ArchiveList from '@/components/pieces/ArchiveList.vue';
+import ClearReadHistory from '@/components/pieces/ClearReadHistory.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import ArchiveList from '@/components/pieces/ArchiveList.vue';
                     Archive
                 </h3>
             </div>
+            <ClearReadHistory/>
             <ArchiveList/>
         </div>
 
