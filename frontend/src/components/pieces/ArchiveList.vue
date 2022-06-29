@@ -1,3 +1,4 @@
+
 <template>
     <ul class="archive_list">
         <li
@@ -28,14 +29,9 @@ export default {
                 let poem_content = document.querySelector('#poem_content')
                 poem_title.innerText = result.data.title
                 poem_content.innerText = result.data.content
-                this.closeArchive()
             }
             
         },
-        closeArchive(){
-            let archive_section = document.querySelector('#PoemArchive')
-            archive_section.style.display = "none"
-        }
     },
 
     mounted: async function(){

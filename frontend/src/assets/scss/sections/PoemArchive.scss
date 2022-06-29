@@ -1,12 +1,11 @@
 #PoemArchive{
-    background-color: #000;
+    background: $proj_gray2;
     display: none;
     padding: 2em;
-    // position: absolute;
     right: 0;
     top: 0;
+    flex: .25;
     h3{
-        color: orange;
         text-align: center;
     }
     ul{
@@ -17,7 +16,7 @@
         list-style: none;
     }
     li{
-        color: orange;
+        padding: .5em;
     }
     li:hover{
         cursor: pointer;
@@ -29,11 +28,31 @@
         gap: 2em;
 
     }
-    #close_icon{
-        background-color: orange;
-        padding: .5em;
-        border-radius: 50%;
+    .archive_banner{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        h3{
+            font-size: 1.5em;
+            color: $proj_primary_dark;
+        }
+        img{
+            height: 1.5em;
+            width: 1.5em;
 
+        }
+    }
+    .archive_list{
+        flex-flow: row wrap;
+        justify-content: center;
+        li:nth-child(even){
+            color: $proj_primary_dark;
+            background: $proj_primary_light;            
+        }
+        li:nth-child(odd){
+            color: #fff;
+            background-color: $proj_primary_dark;
+        }
     }
 }
 

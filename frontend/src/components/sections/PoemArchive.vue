@@ -1,23 +1,19 @@
+<script setup>
+import ArchiveList from '@/components/pieces/ArchiveList.vue';
+</script>
+
 <template>
     <section id="PoemArchive">
         <div class="banner_ctnr">
-            <img
-                id="close_icon"
-                src="@/assets/images/icons/close.svg"
-                alt=""
-            >
-            <h3>
-                Archive
-            </h3>
+            <div class="archive_banner">
+                <img src="@/assets/images/icons/archive.svg" alt="">
+                <h3>
+                    Archive
+                </h3>
+            </div>
+            <ArchiveList/>
         </div>
-        <!-- <ul>
-            <li
-                v-for="poem in poems"
-                :key="poem.id"
-                @click="handleClick($event, poem.id)"            >
-                {{poem.title}}
-            </li>
-        </ul> -->
+
     </section>
 
 </template>

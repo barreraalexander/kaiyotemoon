@@ -34,7 +34,6 @@
 </template>
 
 <script>
-// import HiddenNav from "@/components/navbars/HiddenNav.vue";
 import MainLinks from "@/components/pieces/MainLinks.vue";
 export default{
     methods: {

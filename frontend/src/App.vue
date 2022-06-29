@@ -1,7 +1,7 @@
 <script setup>
 import HeaderNav from '@/components/navbars/HeaderNav.vue';
 import FooterNav from '@/components/navbars/FooterNav.vue';
-import HiddenNav from './components/navbars/HiddenNav.vue';
+import HiddenNav from '@/components/navbars/HiddenNav.vue';
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import HiddenNav from './components/navbars/HiddenNav.vue';
     <main>
       <router-view/>
     </main>
-    <FooterNav/>
+    <FooterNav v-show="false"/>
   </section>
 </template>
 

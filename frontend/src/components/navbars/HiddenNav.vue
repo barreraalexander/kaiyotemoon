@@ -2,6 +2,7 @@
 // import '@/components/pieces/ArchiveList.vue'
 import ArchiveList from '@/components/pieces/ArchiveList.vue';
 import MainLinks from '@/components/pieces/MainLinks.vue';
+import SearchBar from '@/components/pieces/SearchBar.vue';
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import MainLinks from '@/components/pieces/MainLinks.vue';
             <div class="navigation_ctnr">
                 <ul class="hidden_nav_main_links">
                     <MainLinks/>
+                    <SearchBar/>
                 </ul>
                 <ArchiveList v-show="false"/>
             </div>
