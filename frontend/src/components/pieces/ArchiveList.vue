@@ -25,6 +25,8 @@ export default {
 
     methods : {
         async handleClick(event, id){
+            let header_nav = document.querySelector('#HeaderNavSection')
+            header_nav.scrollIntoView()
 
             let result = await axios.get(`http://localhost:5001/poems/${id}`)
             if (result.data){
