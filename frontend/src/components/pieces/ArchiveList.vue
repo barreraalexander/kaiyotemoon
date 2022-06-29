@@ -1,9 +1,9 @@
-
 <template>
     <ul class="archive_list">
         <li
             v-for="poem in poems"
             :key="poem.id"
+            :data-has_read="this.poems_read.includes(poem.title)"
             @click="handleClick($event, poem.id)"
         >
             {{poem.title}}
@@ -19,7 +19,7 @@ export default {
     data () {
         return {
             poems: [],
-            poems_read: ''
+            poems_read: []
         }
     },
 
@@ -33,21 +33,20 @@ export default {
                 poem_title.innerText = result.data.title
                 poem_content.innerText = result.data.content
 
-                localStorage.poems_read += `$${poem_title.innerText}`
-                this.poems_read.push(poem_title.innerText)
-
                 console.log(this.poems_read)
 
-            }
-            
-            
-                        
+                if (! this.poems_read.includes(poem_title.innerText)){
+                    localStorage.poems_read += `$${poem_title.innerText}`
+                    this.poems_read.push(poem_title.innerText)
+                    event.target.dataset.poems_read = 'true'
+                }
+
+            }                        
         },
     },
 
     mounted: async function(){
         // localStorage.clear()
-
 
         let result = await axios.get("http://localhost:5001/poems")
         if (result.data){
@@ -64,18 +63,8 @@ export default {
             for (let title of this.poems_read){
                 console.log(title)
             }
-            // console.log(this.poems_read)
         } 
     },
-
-
-    // watch: {
-    //     poems_read(newStr){
-    //         console.log('changed')
-    //         localStorage.poems_read = newStr;
-        
-    //     }
-    // }
 }
 
 </script>
