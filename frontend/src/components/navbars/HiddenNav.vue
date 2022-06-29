@@ -7,20 +7,24 @@ import MainLinks from '@/components/pieces/MainLinks.vue';
 <template>
     <section id="HiddenNavSection" data-status='hidden'>
         <div class="hidden_nav_ctnr">
-            <div class="empty">                
-            </div>
             <div class="navigation_ctnr">
-                <h2>
-                        Navigate
-                </h2>
                 <ul class="hidden_nav_main_links">
                     <MainLinks/>
                 </ul>
-                <ArchiveList/>
+                <ArchiveList v-show="false"/>
             </div>
         </div>
     </section>
 </template>
+
+
+<script>
+
+// let archive_link = document.querySelector('#mainlinks_archive')
+// console.log(archive_link)
+
+
+</script>
 
 <style lang="scss">
 @import "@/assets/scss/navbars/HiddenNav.scss";

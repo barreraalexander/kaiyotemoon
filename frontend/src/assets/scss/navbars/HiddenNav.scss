@@ -1,9 +1,5 @@
 #HiddenNavSection{
-    background: rgba($color: #fff, $alpha: .25);
-    position: absolute;
-    // top: 0;
-    left: 0;
-    width: 100vw;
+    // width: 100vw;
     padding-top: 2em;
     z-index: 5;
     h2{
@@ -13,41 +9,20 @@
         display: flex;
     }
     .navigation_ctnr{
-        flex: 1;
-        // background: $proj_primary_dark;
-        // background: linear-gradient(-185deg, $proj_primary_dark, #000);
-        // background: linear-gradient(-185deg, $proj_primary_light, #fff);
-        // background: $proj_primary_light;
-        // background-position: center;
-        // background-size: contain;
-        // background-attachment: fixed;
-        // color: #fff;
-        background: rgba($color: #fff, $alpha: .95);
-
-        
+        flex: 1;        
         padding-top: 2em;
-        border-radius: 5px 0 0 5px;
         a{
             color: $proj_primary_dark
         }
     }
-
-    .empty{
-        flex: .25;
-        // background: $proj_primary_dark;
-        // background: #000;
-        opacity: .9;
-    }
-
     .hidden_nav_main_links{
         display: flex;
         flex-flow: column;
         gap: 1em;
-        align-items: center;
+        padding: .25em 2em;
         margin: 1em 0;
         a{
             font-size: 1.5em;
-            // color: #000;
         }
     }
     .archive_list{
@@ -57,11 +32,13 @@
 }
 #HiddenNavSection[data-status="hidden"]{
     display: none;
+    transition: 5s;
 }
 
 @media only screen and (min-width: $desktop_bp) {
     #HiddenNavSection{
         display: none;
+        // opacity: ;
     }
     
 }
