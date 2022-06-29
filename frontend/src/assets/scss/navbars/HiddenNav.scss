@@ -28,6 +28,27 @@
     .archive_list{
         padding: 2em;
         background: $proj_gray2;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+        li{
+            padding: .5em;
+            font-size: .9em;
+        }
+        li:nth-child(even){
+            color: $proj_primary_dark;
+            background: $proj_primary_light;            
+        }
+        li:nth-child(odd){
+            color: #fff;
+            background-color: $proj_primary_dark;
+        }
+
+        li[data-has_read=true]{
+            background-color: $proj_primary_orange;
+            color: #000;
+            // font-size: .25;
+        }
 
     }
 
