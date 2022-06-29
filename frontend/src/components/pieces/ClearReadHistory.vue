@@ -1,7 +1,7 @@
 
 <template>
     <button @click="clearReadHistory" >
-        clear
+        Clear Read History
     </button>
 </template>
 
@@ -22,3 +22,19 @@ export default {
 }
 
 </script>
+
+<style scoped lang="scss">
+
+button{
+    @include light_shadow;
+    @include sm_text;
+    padding: .25em 1em;
+    background-color: $proj_primary_light;
+    border-radius: 10px;
+    border-color: $proj_primary_dark;
+    color: $proj_primary_dark;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+</style>

@@ -1,0 +1,17 @@
+@mixin light_shadow{
+    box-shadow: 5px 2px 40px 3px #c8c8c8;
+}
+
+
+@mixin lg_text{
+    font-family: $font1;
+    font-size: 3.5em;
+    letter-spacing: 1.4px;
+    font-family: 500;
+}
+
+@mixin sm_text{
+    font-family: $font1;
+    font-size: 1.2em;
+    font-weight: 300;
+}
