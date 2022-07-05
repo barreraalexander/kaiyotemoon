@@ -13,11 +13,11 @@ jobs:
 
   
   deploy:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: [build]
     steps:
       - name: deploying things
-      - echo 'going to deploy'
+        run: echo 'going to deploy'
 
 # name: Build and Deploy Code
 
