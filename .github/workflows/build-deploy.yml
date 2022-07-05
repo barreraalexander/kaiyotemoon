@@ -1,11 +1,5 @@
 name: Build and Deploy Code
 
-# on: 
-#     [push, pull-request, merge]:
-#         branches:
-#             - "production"
-#             - "launch-ready"
-
 on: [push, pull_request]
 
 jobs:
@@ -15,4 +9,4 @@ jobs:
       - name: pulling git repo
         uses: actions/checkout@v2
       - name: say hi to alex
-        uses: echo "hi alexander"
+        run: echo "hi alexander"
