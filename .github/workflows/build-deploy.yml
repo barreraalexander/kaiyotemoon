@@ -16,6 +16,17 @@ on: [push, pull_request]
 
 jobs:
   job1:
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+          
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
@@ -28,10 +39,11 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: install all dependencies
         run: pip install -r backend/requirements.txt
-      - name: test with pytest
-        run: |
-          pip install pytest
-          pytest
+      # - name: test with pytest
+      #   run: |
+      #     pip install pytest
+      #     pytest
+
 
 
 
