@@ -30,8 +30,8 @@ jobs:
         run: pip install -r backend/requirements.txt
       - name: test with pytest
         run: |
-        pip install pytest
-        pytest
-        
+          pip install pytest
+          pytest
+
 
 
