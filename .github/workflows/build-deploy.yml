@@ -1,44 +1,45 @@
-# name: Build and Deploy Code
-
-# on: [push, pull_request]
-
-# jobs:
-#   job1:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: pulling git repo
-#         uses: actions/checkout@v2
-#       - name: say hi to alex
-#         run: echo "hi alexander"
 name: Build and Deploy Code
 
 on: [push, pull_request]
 
 jobs:
   job1:
-    services:
-      postgres:
-        image: postgres
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-          
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
-      - name: Install python version 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9"
-      - name: update pip
-        run: python -m pip install --upgrade pip
-      - name: install all dependencies
-        run: pip install -r backend/requirements.txt
+      - name: say hi to alex
+        run: ls -la
+
+# name: Build and Deploy Code
+
+# on: [push, pull_request]
+
+# jobs:
+#   job1:
+#     services:
+#       postgres:
+#         image: postgres
+#         ports:
+#           - 5432:5432
+#         options: >-
+#           --health-cmd pg_isready
+#           --health-interval 10s
+#           --health-timeout 5s
+#           --health-retries 5
+
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: pulling git repo
+#         uses: actions/checkout@v2
+#       - name: Install python version 3.9
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: "3.9"
+#       - name: update pip
+#         run: python -m pip install --upgrade pip
+#       - name: install all dependencies
+#         run: pip install -r backend/requirements.txt
       # - name: test with pytest
       #   run: |
       #     pip install pytest
