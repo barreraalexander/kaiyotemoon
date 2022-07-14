@@ -12,4 +12,19 @@
         cursor: pointer;
         text-decoration: underline;
     }
+    .close_icon_ctnr{
+        width: 100%;
+        img{
+            width: 1em;
+            background-color: $proj_primary_dark;
+            border-radius: 50%;
+            padding: .25em;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop_bp){
+    .close_icon_ctnr{
+        display: none;
+    }
 }

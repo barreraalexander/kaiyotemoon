@@ -1,5 +1,12 @@
 <template>
     <ul class="archive_list">
+        <div class="close_icon_ctnr">
+            <img
+                src="@/assets/images/icons/close_alt.svg"
+                alt="close icon for archives list"
+                @click="handleClose"
+            >
+        </div>
         <li
             v-for="poem in poems"
             :key="poem.id"
@@ -13,7 +20,6 @@
 
 <script>
 import axios from 'axios'
-// import { watch } from 'fs'
 
 export default {
     data () {
@@ -42,13 +48,16 @@ export default {
                     event.target.dataset.poems_read = 'true'
                 }
 
-            }                        
+            }  
         },
+        handleClose(){
+            let archive_list = document.querySelector('.archive_list')
+            archive_list.style.display = 'none'
+
+        }
     },
 
     mounted: async function(){
-        // localStorage.clear()
-
         let result = await axios.get("http://localhost:5001/poems")
         if (result.data){
             for (let elem of result.data){
@@ -61,9 +70,9 @@ export default {
 
         if (localStorage.poems_read){
             this.poems_read = localStorage.poems_read.split('$')
-            for (let title of this.poems_read){
-                console.log(title)
-            }
+            // for (let title of this.poems_read){
+            //     console.log(title)
+            // }
         } 
     },
 }
