@@ -1,7 +1,7 @@
 <template>
   <section id="About_Section">
     <div class="about">
-      <h1>This is an About Page</h1>
+      <h1>About Page</h1>
       <p>
         I don't have much to say at this moment :)
       </p>
