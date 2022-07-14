@@ -12,7 +12,7 @@ class PoemCreate(PoemBase):
 
 class Poem(PoemBase):
     id: int
-    created_at: datetime
+    # created_at: datetime
 
     class Config:
         orm_mode = True
