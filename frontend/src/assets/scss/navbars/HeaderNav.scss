@@ -44,10 +44,14 @@
         display: none;
     }
 
-    #menu_icon[data-status="hidden"],
-    #close_icon[data-status="hidden"]{
+    #close_icon{
         display: none;
+        opacity: 0;
     }
+    // #menu_icon[data-status="hidden"],
+    // #close_icon[data-status="hidden"]{
+    //     display: none;
+    // }
 
 }
 

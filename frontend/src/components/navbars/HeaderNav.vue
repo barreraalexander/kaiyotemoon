@@ -34,6 +34,8 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+
 import MainLinks from "@/components/pieces/MainLinks.vue";
 export default{
     methods: {
@@ -45,18 +47,59 @@ export default{
             let hidden_nav = document.querySelector('#HiddenNavSection');
             let menu_icon = document.querySelector('#menu_icon');
             let close_icon = document.querySelector('#close_icon');
+
+            let menu_timeline = gsap.timeline({
+                // paused: true
+            })
+
+            menu_timeline.to(
+                hidden_nav,
+                {
+                    duration: .1,
+                    opacity: 1,
+                    display: 'block',
+                    // ease: easeInOut,
+
+                }
+            )
+
+            menu_timeline.to(
+                menu_icon,
+                {
+                    duration: .1,
+                    opacity: 0,
+                    display: 'none',
+                    // ease: Sine.easeInOut,
+                }
+            )
+
+            menu_timeline.to(
+                close_icon,
+                {
+                    duration: .1,
+                    opacity: 1,
+                    display: 'block'
+                }
+            )
+
+
             if (event.target===menu_icon){
-                hidden_nav.dataset.status = ''
-                menu_icon.dataset.status = 'hidden';
-                close_icon.dataset.status = '';
+                menu_timeline.play()
+                // hidden_nav.dataset.status = ''
+                // menu_icon.dataset.status = 'hidden';
+                // close_icon.dataset.status = '';
+                // alert('this')
             } else {
-                hidden_nav.dataset.status = 'hidden'
-                menu_icon.dataset.status = '';
-                close_icon.dataset.status = 'hidden';
+                menu_timeline.reverse()
+                // alert('running')
+                // hidden_nav.dataset.status = 'hidden'
+                // menu_icon.dataset.status = '';
+                // close_icon.dataset.status = 'hidden';
             }
         }
+
     },
-    components: {MainLinks }
+    components: {MainLinks}
 }
 
 </script>
