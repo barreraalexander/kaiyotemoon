@@ -3,7 +3,6 @@ from server import create_app
 from server import models
 import pytest
 
-
 app = create_app()
 client = TestClient(app)
 
