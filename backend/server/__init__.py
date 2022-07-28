@@ -10,6 +10,8 @@ def create_app():
     origins = [
         "http://localhost:8080",
         "http://localhost:8080/?",
+        "https://kaiyotemoonfront.herokuapp.com/",
+        "http://kaiyotemoonfront.herokuapp.com/",
     ]
 
     app = FastAPI()
